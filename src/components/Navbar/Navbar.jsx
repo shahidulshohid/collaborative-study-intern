@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -27,39 +27,61 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <NavLink to="/">Home</NavLink>
+                <Link to="/" className="text-lg">
+                  Home
+                </Link>
               </li>
               <li>
-                <NavLink to="/about">About Us</NavLink>
+                <Link to="/about" className="text-lg">
+                  About Us
+                </Link>
               </li>
               <li>
-                <NavLink to="/blog">Blog</NavLink>
+                <Link to="/blog" className="text-lg">
+                  Blog
+                </Link>
               </li>
               <li>
-                <NavLink to="/studentResources">Student Resources</NavLink>
+                <Link to="/studentResources" className="text-lg">
+                  Student Resources
+                </Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to="/" className="text-xl md:text-2xl font-bold">
+            Collaborate
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li className="text-lg">
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li className="text-lg text-pink-800 font-semibold">
-              <NavLink to="/about">About Us</NavLink>
+            <li>
+              <Link to="/" className="text-lg">
+                Home
+              </Link>
             </li>
             <li>
-              <NavLink to="/blog">Blog</NavLink>
+              <Link to="/about" className="text-lg">
+                About Us
+              </Link>
             </li>
             <li>
-              <NavLink to="/studentResources">Student Resources</NavLink>
+              <Link to="/blog" className="text-lg">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/studentResources" className="text-lg">
+                Student Resources
+              </Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <Link>
+            <button className="px-4 py-2 bg-primary text-white rounded-lg text-lg">
+              Logout
+            </button>
+          </Link>
         </div>
       </div>
     </div>
