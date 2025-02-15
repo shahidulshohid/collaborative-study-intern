@@ -5,8 +5,8 @@ import { authContext } from "../../provider/Authprovider";
 const Navbar = () => {
   const {loginWithGoogle, logout} = useContext(authContext)
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <div className=" sticky top-0 z-50">
+      <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -80,8 +80,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link>
-            <button onClick={loginWithGoogle} className="px-4 py-2 bg-primary text-white rounded-lg text-lg">
+          <Link to="/login">
+            <button className="px-4 py-2 bg-primary text-white rounded-lg text-lg">
               Login
             </button>
             <button onClick={logout} className="px-4 py-2 bg-primary text-white rounded-lg text-lg">
