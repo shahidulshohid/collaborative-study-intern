@@ -1,11 +1,10 @@
 const AboutPage = () => {
-    let dict = {};
-    for (let i = 0; i < n; i++) {
-        const arrItem = readLine().split(' ');
-        const key = arrItem[0];
-        const value = parseInt(arrItem[1], 10);
-        dict[key] = value;
-    }
+ const maxNumber = (arr) => {
+    const max = Math.max(...arr)
+    console.log(max)
+ }
+ maxNumber([-1, -2, -3, -4])
+
   return (
     <div>
       <h3>About page</h3>
